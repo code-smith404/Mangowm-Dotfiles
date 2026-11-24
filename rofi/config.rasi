@@ -1,0 +1,162 @@
+/* ============================================================
+ * rofi — purple glass theme matching the mango desktop
+ * ============================================================ */
+
+configuration {
+    font:                    "Inter 12";
+    icon-theme:              "Papirus-Dark";
+    show-icons:              true;
+    drun-display-format:     "{name}";
+    display-drun:            "Applications";
+    display-run:             "Run";
+    display-window:          "Windows";
+    display-filebrowser:     "Files";
+    modi:                    "drun,run,window";
+    sidebar-mode:            false;
+    matching:                "normal";
+    sort:                    true;
+    case-sensitive:          false;
+    cycle:                   true;
+    hover-select:            true;
+    scroll-method:           1;
+}
+
+* {
+    bg:        rgba(23, 17, 32, 74%);
+    bg-soft:   rgba(31, 24, 41, 100%);
+    surface:   rgba(42, 32, 56, 100%);
+    line:      rgba(61, 48, 80, 100%);
+    fg:        rgba(239, 230, 248, 100%);
+    fg-dim:    rgba(163, 140, 192, 100%);
+    accent:    rgba(203, 160, 240, 100%);
+    accent-fg: rgba(23, 17, 32, 100%);
+    selected:  rgba(154, 114, 216, 100%);
+}
+
+window {
+    transparency:     "real";
+    location:         center;
+    anchor:           center;
+    width:            640px;
+    border:           1px;
+    border-color:     rgba(61, 48, 80, 90%);
+    border-radius:    22px;
+    background-color: @bg;
+    padding:          14px;
+    spacing:          10px;
+    children:         [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: rgba(31, 24, 41, 88%);
+    border:           1px;
+    border-color:     rgba(61, 48, 80, 90%);
+    border-radius:    12px;
+    padding:          8px 12px;
+    spacing:          10px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color: @accent;
+    padding:    0 4px 0 0;
+}
+
+entry {
+    placeholder:       "Search…";
+    placeholder-color: @fg-dim;
+    text-color:        @fg;
+    cursor:            text;
+}
+
+listview {
+    background-color: transparent;
+    lines:            9;
+    columns:          1;
+    spacing:          4px;
+    scrollbar:        true;
+    fixed-height:     false;
+    dynamic:          true;
+    cycle:            true;
+}
+
+element {
+    background-color: transparent;
+    text-color:       @fg;
+    padding:          8px 10px;
+    spacing:          10px;
+    border-radius:    10px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color:       rgba(255, 255, 255, 100%);
+}
+
+element selected.active {
+    background-color: @accent;
+    text-color:       @accent-fg;
+}
+
+element selected.urgent {
+    background-color: rgba(239, 139, 184, 100%);
+    text-color:       @accent-fg;
+}
+
+element-icon {
+    size:            22px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+scrollbar {
+    width:            4px;
+    border-radius:    2px;
+    background-color: transparent;
+    handle-color:     rgba(203, 160, 240, 60%);
+    handle-width:     4px;
+    padding:          2px 0;
+}
+
+mode-switcher {
+    background-color: transparent;
+    spacing:          8px;
+}
+
+button {
+    background-color: @bg-soft;
+    text-color:       @fg-dim;
+    border-radius:    10px;
+    padding:          6px 12px;
+}
+
+button selected {
+    background-color: @accent;
+    text-color:       @accent-fg;
+}
+
+textbox {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+error {
+    background-color: rgba(239, 139, 184, 100%);
+    text-color:       @accent-fg;
+    border-radius:    10px;
+}

@@ -1,0 +1,148 @@
+/* =========================================================
+ * mangobar — "aurora glass" · dusk plum
+ *
+ * Top-lit gradient capsules so the bar reads as glass over the
+ * wallpaper, one luminous accent for the active workspace and
+ * the battery, quiet capsules for the status readouts.
+ *
+ * NOTE: 6-digit #RRGGBB only — 8-digit colors corrupt mangobar's
+ * backgrounds. Gradients are supported via linear-gradient().
+ * ========================================================= */
+
+* {
+    font-family: "JetBrainsMonoNL Nerd Font";
+    font-size: 13px;
+    font-weight: Medium;
+}
+
+* {
+    color: #e9ddf7;
+    background: linear-gradient(to bottom, #2b2038, #1d1528);
+    padding: 0px 8px;
+    margin: 2px 2px;
+    border-radius: 100px;
+}
+
+/* the bar itself stays transparent: capsules float on the wallpaper */
+#bar {
+    background: none;
+    margin: 0px 10px;
+}
+#bar.sel {
+    background: none;
+}
+
+/* ---- workspaces: nine small capsules, active one opens up ---- */
+#tags {
+    background: linear-gradient(to bottom, #241b31, #171120);
+    color: #9a86b3;
+    padding: 0px 8px;
+    margin: 2px 1px;
+}
+#tags.active {
+    background: linear-gradient(to bottom, #f7ebff, #d9b7fb 52%, #b98ae8);
+    color: #171120;
+    font-weight: 700;
+    padding: 0px 12px;
+}
+#tags.occupied {
+    background: linear-gradient(to bottom, #3f2f55, #2a2038);
+    color: #efe6f8;
+}
+#tags.urgent {
+    background: linear-gradient(to bottom, #f9b3cc, #e8769f);
+    color: #24101c;
+    font-weight: 700;
+}
+#tags.empty {
+    background: linear-gradient(to bottom, #241b31, #171120);
+    color: #9a86b3;
+}
+#tags:hover,
+#tags.hover,
+#workspaces:hover {
+    background: linear-gradient(to bottom, #463659, #322542);
+    color: #f6effd;
+}
+
+#overview {
+    background: linear-gradient(to bottom, #f7ebff, #d9b7fb 52%, #b98ae8);
+    color: #171120;
+    font-weight: 700;
+}
+
+/* ---- focused window ---- */
+#title {
+    background: linear-gradient(to bottom, #2b2038, #1c1427);
+    color: #c4b1da;
+    font-size: 12px;
+}
+
+/* ---- clock: bright time + quiet date ---- */
+#clock {
+    background: linear-gradient(to bottom, #3a2b4e, #251b35);
+    color: #fdf8ff;
+    font-weight: 600;
+    padding: 0px 12px;
+    margin: 2px 3px;
+}
+#clock.date {
+    background: linear-gradient(to bottom, #241b31, #1b1425);
+    color: #b9a6d6;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0px 9px;
+}
+
+/* ---- status readouts ---- */
+#cpu {
+    background: linear-gradient(to bottom, #2b2038, #1d1528);
+    color: #c3b0da;
+}
+#mem {
+    background: linear-gradient(to bottom, #2b2038, #1d1528);
+    color: #c3b0da;
+}
+
+#network {
+    background: linear-gradient(to bottom, #2b2038, #1d1528);
+    color: #c3b0da;
+}
+#network.connected {
+    color: #cba0f0;
+}
+#network.disconnected {
+    background: linear-gradient(to bottom, #462434, #2e1822);
+    color: #ef8bb8;
+}
+
+#volume {
+    background: linear-gradient(to bottom, #2b2038, #1d1528);
+    color: #d9c9ec;
+}
+#brightness {
+    background: linear-gradient(to bottom, #2b2038, #1d1528);
+    color: #d0bfe7;
+}
+
+/* second light source: the battery */
+#battery {
+    background: linear-gradient(to bottom, #f7ebff, #d9b7fb 52%, #b98ae8);
+    color: #171120;
+    font-weight: 700;
+    padding: 0px 10px;
+    margin: 2px 2px;
+}
+
+#tray {
+    background: linear-gradient(to bottom, #2b2038, #1d1528);
+    padding: 0px 6px;
+    margin: 2px 2px 2px 1px;
+}
+
+/* layout symbol (only if the module is enabled) */
+#layout {
+    background: linear-gradient(to bottom, #3f2f55, #2a2038);
+    color: #efe6f8;
+    min-width: 34px;
+}

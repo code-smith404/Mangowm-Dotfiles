@@ -1,0 +1,90 @@
+// mangobar config (JSONC) — purple glass look
+{
+    "layer": "top",
+    "height": 31,
+    "buffer-scale": 1,
+    "sys-interval": 2,
+    "gtk-icon-theme-name": "Papirus-Dark",
+
+    "modules-left": [
+        "workspaces",
+        "window"
+    ],
+    "modules-center": [
+        "clock#time",
+        "clock#date"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "network",
+        "pulseaudio",
+        "backlight",
+        "battery",
+        "tray"
+    ],
+
+    "workspaces": {
+        "hide-empty": false,
+        "overview-label": "OVERVIEW",
+        "on-click": "activate",
+        "on-click-right": "toggle"
+    },
+    "window": {
+        "format": "{}"
+    },
+
+    "cpu": {
+        "format": "󰍛 {}%",
+        "interval": 2,
+        "on-click": "foot -e top"
+    },
+    "memory": {
+        "format": "󰘚 {}%",
+        "interval": 3
+    },
+
+    "network": {
+        "format": "{icon} {ifname}",
+        "format-wifi": "󰖩 {ssid}",
+        "format-disconnected": "󰖪 offline",
+        "icon-wifi": "󰖩",
+        "icon-ethernet": "󰈀",
+        "icon-disconnected": "󰖪",
+        "signal-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "interval": 3
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 muted",
+        "icons": ["󰕿", "󰖀", "󰕾"],
+        "scroll-step": 5,
+        "max-volume": 150,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+
+    "backlight": {
+        "format": "󰃠 {percent}%",
+        "scroll-step": 2
+    },
+
+    "battery": {
+        "format": "{icon} {percent}%",
+        "icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "icon-charging": "󰂄",
+        "icon-ac": "󰚥"
+    },
+
+    "clock#time": {
+        "format": "󰥔 {:L%H:%M}"
+    },
+    "clock#date": {
+        "format": "{:L%a, %d %b}"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 8
+    }
+}
