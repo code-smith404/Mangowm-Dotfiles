@@ -8,6 +8,16 @@ My **mangowm** rice — purple glass / "dusk plum" theme across the compositor, 
 - **Launcher:** [rofi](https://github.com/davatorium/rofi) — purple glass drun/run/window theme
 - **Wallpapers:** included in [`wallpapers/`](wallpapers/)
 
+## 📸 Previews
+
+<p align="center">
+  <img src="previews/mangobar.png" alt="mangobar — workspaces, clock, system stats" width="100%"/>
+  <br><br>
+  <img src="previews/foot.png" alt="foot terminal — dusk plum palette with fastfetch" width="90%"/>
+  <br><br>
+  <img src="previews/rofi.png" alt="rofi — purple glass application launcher" width="55%"/>
+</p>
+
 ## 🚀 One-liner install (everything)
 
 ```bash
@@ -152,6 +162,7 @@ foot/            terminal config
 rofi/            launcher theme
 mango-settings/  settings GUI state
 wallpapers/      dusk-aurora + lock wallpaper
+previews/        screenshots for this readme
 protocols/       generated wayland protocol code (for mangowall)
 install.sh       the one-liner
 ```
